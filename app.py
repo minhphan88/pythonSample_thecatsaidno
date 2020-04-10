@@ -11,12 +11,14 @@ def favicon():
 
 @app.route("/")
 def home():
-    
+
     # myPlatform = sys.platform
-    
+
     return render_template("home.html")
+
+@app.route('/page')
+def page():
+    return "This is PAGE"
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
